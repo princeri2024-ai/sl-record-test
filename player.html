@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>All Along</title>
+</head>
+
+<body style="margin:0; background:black;">
+
+<audio id="player" autoplay>
+    <source src="All%20Along%20%281%29.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    const player = document.getElementById("player");
+
+    player.volume = 1.0;
+
+    window.addEventListener("load", function () {
+        player.play().catch(function(error) {
+            console.log("Autoplay blocked:", error);
+        });
+    });
+</script>
+
+</body>
+</html>
