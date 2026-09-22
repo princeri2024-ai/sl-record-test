@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>All Along</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        button {
+            font-size: 30px;
+            padding: 20px 50px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
-<body style="margin:0; background:black;">
+<body>
 
-<audio id="player" autoplay>
+<button onclick="playSong()">PLAY</button>
+
+<audio id="player">
     <source src="All%20Along%20%281%29.mp3" type="audio/mpeg">
 </audio>
 
 <script>
-    const player = document.getElementById("player");
-
-    player.volume = 1.0;
-
-    window.addEventListener("load", function () {
-        player.play().catch(function(error) {
-            console.log("Autoplay blocked:", error);
-        });
-    });
+function playSong()
+{
+    document.getElementById("player").play();
+}
 </script>
 
 </body>
